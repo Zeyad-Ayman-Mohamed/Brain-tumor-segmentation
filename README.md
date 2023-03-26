@@ -98,7 +98,9 @@ The first model showed an obvious case of underfitting. This can be interpreted 
 Fig.4 shows the underfitting of the first model. The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
 
 ![alt text][Fig.4]
+
 [Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig4.png 
+
 
 2nd Model
 The results of the second model were more promising but they still needed some improvement. However, this model was better suited for the problem as it didn’t underfit. The initial results of the second model after running on 40 epochs are shown in Fig.5.
@@ -114,6 +116,7 @@ Fig.6 shows the initial results of the second model on 40 epochs. The original M
 ![alt text][Fig.6]
 
 [Fig.6]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig6.png 
+
 
 B. Data Splitting Effects 
 Splitting the data by patients made the model take much longer to reach good results but it also meant it was more robust to seeing completely new images. 
@@ -165,6 +168,7 @@ Fig.10 shows the effect of random data splitting by patients with a 0.1 learning
 ![alt text][Fig.10]
 
 [Fig.10]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig10.png 
+
 
 ## conclusion
 Medical image segmentation saves radiologists intensive manual labor. Creating a robust model means following critical procedures to stop the model from cheating. This can be through correct data splitting techniques such as splitting data by patients and good distribution of the data among training and testing. Data augmentation is also crucial to handle small datasets, especially in medical image problems. UNet is the great start to a segmentation problem with medical images. With the right architecture, Adam optimizer, 0.01 learning rate, and 15 batch size, the 2nd model could achieve a dice coefficient of 0.8 after 150 epochs.
