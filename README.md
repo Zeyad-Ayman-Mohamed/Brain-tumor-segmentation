@@ -50,8 +50,9 @@ The main building block of the encoder consisted of a conv2d layer followed by b
 The model contained 8 blocks with several filters starting from 32, 64, 128, 256 and then going down from 256, 128, 64, and 32 again. The model contained a total of 1,337,761 parameters.
 
 
-Fig.1 An illustration of the UNet model architecture
+![alt text][Fig.1]
 
+[Fig.1]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig1.png "An illustration of the UNet model architecture"
 
 2nd Model
 
