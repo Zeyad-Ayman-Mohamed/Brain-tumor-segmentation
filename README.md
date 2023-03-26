@@ -78,13 +78,14 @@ The Dice Coefficient is 2 * the overlapping area divided by the total number of 
 Fig.2 shows the IOU equation
 ![alt text][Fig.2]
 
-[Fig.2]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig2.png 
+[Fig.2]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig2.png "shows the IOU equation"
 
 Fig.3 shows the dice coefficient equation
 
 ![alt text][Fig.3]
 
 [Fig.3]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig3.png 
+
 ## results and discussion
 
 A.  Model Architecture
@@ -92,20 +93,26 @@ A.  Model Architecture
 The first model showed an obvious case of underfitting. This can be interpreted as a result of the simplicity of the implementation and few trainable parameters. Even with running for 100 epochs and augmented data, the model couldn’t output any predictions. Dice loss and coefficient are shown in Fig.4.
 
 Fig.4 shows the underfitting of the first model. The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
+
 ![alt text][Fig.4]
 
 [Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig4.png 
+
 2nd Model
 The results of the second model were more promising but they still needed some improvement. However, this model was better suited for the problem as it didn’t underfit. The initial results of the second model after running on 40 epochs are shown in Fig.5.
 
 Fig.5 shows the initial results of the second model on 40 epochs.  The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
+
 ![alt text][Fig.5]
 
 [Fig.5]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig5.png 
+
 Fig.6 shows the initial results of the second model on 40 epochs. The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
+
 ![alt text][Fig.6]
 
 [Fig.6]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig6.png 
+
 B. Data Splitting Effects 
 Splitting the data by patients made the model take much longer to reach good results but it also meant it was more robust to seeing completely new images. 
 On splitting the patients’ folders consecutively, the testing patients were too hard for the patient to predict. This trial gave 0.7 training and validation dice and 0.4 testing dice coefficient.
@@ -131,11 +138,13 @@ Intuitively, given the small batch size, increasing the number of iterations enh
 
 
 Fig.7 shows the effect of random data splitting by patients with a 0.1 learning rate in the second model. The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
+
 ![alt text][Fig.7]
 
 [Fig.7]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig7.png 
 
 Fig.8 shows the effect of random data splitting by patients with a 0.1 learning rate in the second model.  The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
+
 ![alt text][Fig.8]
 
 [Fig.8]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig8.png 
@@ -148,10 +157,13 @@ Fig.9 shows the effect of random data splitting by patients with a 0.01 learning
 ![alt text][Fig.9]
 
 [Fig.9]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig9.png 
+
 Fig.10 shows the effect of random data splitting by patients with a 0.1 learning rate in the second model.  The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
+
 ![alt text][Fig.10]
 
 [Fig.10]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig10.png 
+
 ## conclusion
 Medical image segmentation saves radiologists intensive manual labor. Creating a robust model means following critical procedures to stop the model from cheating. This can be through correct data splitting techniques such as splitting data by patients and good distribution of the data among training and testing. Data augmentation is also crucial to handle small datasets, especially in medical image problems. UNet is the great start to a segmentation problem with medical images. With the right architecture, Adam optimizer, 0.01 learning rate, and 15 batch size, the 2nd model could achieve a dice coefficient of 0.8 after 150 epochs.
 
