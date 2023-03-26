@@ -4,16 +4,16 @@ Zeiad Ayman*, Yara Hossam El-Din *, Habiba Mohammed*
 Inas Yassin *, Merna Atef*
 *Department of System and Biomedical Engineering, Cairo University, Giza, Egypt  
 
-Abstract— In brain MRI analysis, image segmentation is commonly used for measuring and visualizing the brain's anatomical structures, for analyzing brain changes, for delineating pathological regions, and for surgical planning and image-guided interventions, Brain image segmentation is one of the most time-consuming and challenging procedures in a clinical environment. Since dealing with brain diseases is highly critical, medical staff usually need a second opinion, while conforming to the confidentiality of user privacy, AI systems propose a convenient workaround.Unet model was trained and used for this project which reached a dice coefficient of 0.79.
-Keywords — Brain segmentation, UNet, Deep learning, MRI images.
-Introduction
+## Abstract
+In brain MRI analysis, image segmentation is commonly used for measuring and visualizing the brain's anatomical structures, for analyzing brain changes, for delineating pathological regions, and for surgical planning and image-guided interventions, Brain image segmentation is one of the most time-consuming and challenging procedures in a clinical environment. Since dealing with brain diseases is highly critical, medical staff usually need a second opinion, while conforming to the confidentiality of user privacy, AI systems propose a convenient workaround.Unet model was trained and used for this project which reached a dice coefficient of 0.79.
+## Introduction
 In the medical field, the analysis of medical images is crucial for the diagnosis and treatment of most modern diseases, especially life-threatening ones like tumors.
 For the brain the safest option for imaging is MRI as it does not contain hazards of other imaging techniques like ionizing radiation in CT scan, also it gives the ability to see the organs in a whole new depth that isn't available by other means.
 Due to the high risk of the disease and its consequences on the patient and his/her family, there is no room for error in such a diagnosis.Physicians should be highly trained in that regard in two aspects, the first is detecting the tumor whether its size is big or small, and the second is making sure that it’s, in fact, a tumor and not an enlarged part for example.This training process isn't easy and even if the physician is highly trained there is still room for error.
 So, mostly such diagnoses are done by a team of physicians to ensure that it’s done correctly but this is not available in all treatment centers, so a computerized method to provide a second opinion for the physician is needed, and there is another reason for that which is the privacy of the patient.
 If the patient is a high profile person information about his/her condition must be protected by all means as it may have ramifications that will affect him and those around him and even may affect society in some cases if the patient is in a high position like a government official for example.So, in such cases, these patients don't trust many physicians so a team opinion is out of option, and the physician needs to diagnose the patient correctly in such a situation a computerized solution will become very handy.
 
-literature review
+## literature review
 we checked out what papers achieve until now, 
 A. Evaluation of magnetic resonance image segmentation in brain low-grade gliomas using support vector machine and convolutional neural network [1]
 Their method was based on SVM and CNN are developed and evaluated for brain LGG MR image segmentation studies. The segmentation performance in terms of accuracy and cost is quantitatively analyzed and compared between the SVM and CNN techniques developed.
@@ -39,7 +39,7 @@ Data
 This data set called LGG Segmentation Dataset [5] contains brain MR images together with manual FLAIR abnormality segmentation masks.The images were obtained from The Cancer Imaging Archive (TCIA).They correspond to 110 patients included in The Cancer Genome Atlas (TCGA). Tumor genomic clusters and patient data are provided in the data.csv file.
 
 
-Methods
+## Methods
 A.  Model Architecture
 UNet was used with various shapes in this project, in general, UNet is a known deep learning network used for image segmentation and was created originally for medical image segmentation.
 UNet can be divided into 3 parts which are the encoder, bottleneck, and decoder. The UNet also has skip connections or concatenations so that spatial info isn't lost after pooling layers, hence the network can classify the “what” and “where.”  Encoder's job is to understand info in the image, the decoder up-samples the image back. Figure.1 shows the UNet architecture.
@@ -79,7 +79,7 @@ Fig.2 shows the IOU equation
 
 Fig.3 shows the dice coefficient equation
 
-results and discussion
+## results and discussion
 
 A.  Model Architecture
 1st Model
@@ -130,14 +130,9 @@ Fig.9 shows the effect of random data splitting by patients with a 0.01 learning
 
 
 Fig.10 shows the effect of random data splitting by patients with a 0.1 learning rate in the second model.  The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
-conclusion
+## conclusion
 Medical image segmentation saves radiologists intensive manual labor. Creating a robust model means following critical procedures to stop the model from cheating. This can be through correct data splitting techniques such as splitting data by patients and good distribution of the data among training and testing. Data augmentation is also crucial to handle small datasets, especially in medical image problems. UNet is the great start to a segmentation problem with medical images. With the right architecture, Adam optimizer, 0.01 learning rate, and 15 batch size, the 2nd model could achieve a dice coefficient of 0.8 after 150 epochs.
-References
-[1] Q. Yang, H. Zhang, J. Xia, and X. Zhang, ‘Evaluation of magnetic resonance image segmentation in brain low-grade gliomas using support vector machine and convolutional neural network’, Quantitative Imaging in Medicine and Surgery, vol. 11, pp. 300–316, 01 2021.
-[2] S. Ghosh, A. Chaki, and K. Santosh, ‘Improved U-Net architecture with VGG-16 for brain tumor segmentation’, Physical and Engineering Sciences in Medicine, vol. 44, 05 2021.
-[3]S. M. A. Sharif, R. A. Naqvi, and M. Biswas, ‘Learning Medical Image Denoising with Deep Dynamic Residual Attention Network’, Mathematics, vol. 8, no. 12, 2020.
-[4]M. Buda, A. Saha, and M. A. Mazurowski, ‘Association of genomic subtypes of lower-grade gliomas with shape features automatically extracted by a deep learning algorithm’, Computers in Biology and Medicine, vol. 109, pp. 218–225, 2019.
-[5] https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
+
 
 
 
