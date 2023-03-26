@@ -97,7 +97,6 @@ The first model showed an obvious case of underfitting. This can be interpreted 
 
 Fig.4 shows the underfitting of the first model. The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
 
-![alt text][Fig.4]
 
 [Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig4.png 
 
