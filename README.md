@@ -99,7 +99,7 @@ Fig.4 shows the underfitting of the first model. The dice coefficient against it
 
 ![alt text][Fig.4]
 
-[Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig4.png 
+[Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig_4.png 
 
 
 2nd Model
@@ -115,7 +115,7 @@ Fig.6 shows the initial results of the second model on 40 epochs. The original M
 
 ![alt text][Fig.6]
 
-[Fig.6]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig6.png 
+[Fig.6]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS-fig6.png 
 
 
 B. Data Splitting Effects 
@@ -167,7 +167,7 @@ Fig.10 shows the effect of random data splitting by patients with a 0.1 learning
 
 ![alt text][Fig.10]
 
-[Fig.10]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig10.png 
+[Fig.10]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/bs_fig10.png 
 
 
 ## conclusion
