@@ -77,9 +77,11 @@ IoU is the overlapping area between the predicted segmentation and the ground tr
 The Dice Coefficient is 2 * the overlapping area divided by the total number of pixels in both images as shown in Fig.3.
 
 Fig.2 shows the IOU equation
+
 ![alt text][Fig.2]
 
 [Fig.2]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig2.png 
+
 
 Fig.3 shows the dice coefficient equation
 
@@ -94,6 +96,7 @@ A.  Model Architecture
 The first model showed an obvious case of underfitting. This can be interpreted as a result of the simplicity of the implementation and few trainable parameters. Even with running for 100 epochs and augmented data, the model couldn’t output any predictions. Dice loss and coefficient are shown in Fig.4.
 
 Fig.4 shows the underfitting of the first model. The dice coefficient against iterations is shown at the top. The loss against iterations is shown at the bottom.
+
 ![alt text][Fig.4]
 
 [Fig.4]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig4.png 
@@ -108,6 +111,7 @@ Fig.5 shows the initial results of the second model on 40 epochs.  The dice coef
 [Fig.5]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig5.png 
 
 Fig.6 shows the initial results of the second model on 40 epochs. The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
+
 ![alt text][Fig.6]
 
 [Fig.6]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig6.png 
@@ -158,6 +162,7 @@ Fig.9 shows the effect of random data splitting by patients with a 0.01 learning
 [Fig.9]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig9.png 
 
 Fig.10 shows the effect of random data splitting by patients with a 0.1 learning rate in the second model.  The original MRI image is on the left. The original mask is in the middle, and the predicted mask is on the right.
+
 ![alt text][Fig.10]
 
 [Fig.10]:https://github.com/Zeyad-Ayman-Mohamed/Brain-tumor-segmentation/blob/main/images/BS_fig10.png 
